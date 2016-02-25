@@ -1,0 +1,13 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>{{selectedItem.title}}</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-card *ngFor="#img of selectedItem.imgs">
+        <img src="{{img}}" />
+        
+    </ion-card>
+</ion-content>
